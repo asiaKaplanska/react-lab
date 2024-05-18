@@ -12,3 +12,7 @@ src/App.js,1\e\1e43fa63aecd2127be034b3fb9d4caa172275714
 src/index.js,f\9\f900edc44cb929c2267a16100a32851f6d5b477d
 A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
+=
+src/LoginForm,b\b\bbb31b37be0d77cc80462f0530c12d2c46243dbc
+@
+src/LoginForm.js,b\3\b33a53bdca64a9c74e4a3e180752a289d18cf1c8

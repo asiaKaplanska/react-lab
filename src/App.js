@@ -2,34 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
 import "milligram";
+import LoginForm from "./LoginForm";
 
 function App() {
-    const [email, setEmail] = useState('student@student.agh.edu.pl');
-    const [isAuthenticated, setAuthentication] = useState(false);
-
-    function handleChange(event) {
-        setEmail(event.target.value);
-    }
+    const [authenticatedUserName, setAuthenticatedUserName] = useState('')
 
     function logout() {
-        setAuthentication(false);
-        setEmail('');
+        setAuthenticatedUserName('');
     }
 
     let content;
-    if (isAuthenticated) {
+    if (authenticatedUserName) {
         content = <div>
-            <h2>Twój email to: {email}</h2>
+            <h2>Twój email to: {authenticatedUserName}</h2>
             <button onClick={logout}>
                 Wyloguj się
             </button>
         </div>
     } else {
         content = <div>
-            <input type="text" onChange={handleChange}/>
-            <button onClick={() => setAuthentication(true)}>
-                Zaloguj się
-            </button>
+            <LoginForm onLogin={(email) => setAuthenticatedUserName(email)}
+                       buttonLabel="Zaloguj Się"/>
         </div>
     }
 
